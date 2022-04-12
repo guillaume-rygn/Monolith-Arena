@@ -1,0 +1,163 @@
+.body{
+color:white;
+background-image: linear-gradient(180deg, rgba(194, 53, 53, 0.288) 0%, rgba(10, 6, 0, 0.384) 100%), url("https://cdn2.softswiss.net/casinochan/b/booming/GladiatorArena.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 100vh;
+font-family: 'Playfair Display', serif;
+overflow: hidden;
+}
+
+#title{
+  max-width: 600px;
+}
+
+#board{
+  color: black;
+  padding: 20px;
+  border-radius: 30px;
+  background-image: url("https://media.istockphoto.com/photos/old-paper-texture-picture-id612833834?k=20&m=612833834&s=612x612&w=0&h=Bkc_DmyRRl8wNzgN2pv4DAmdoTb03r8DYOaLVm7ufQc=");
+  -webkit-box-shadow: 0px 0px 15px -2px #000000; 
+  box-shadow: 0px 0px 15px -2px #000000;
+  border: 3px solid rgb(100, 5, 5) ;
+  max-width: 450px;
+}
+
+#event, #final{
+
+  color: black;
+  padding: 20px;
+  border-radius: 30px;
+  background-image: url("https://media.istockphoto.com/photos/old-paper-texture-picture-id612833834?k=20&m=612833834&s=612x612&w=0&h=Bkc_DmyRRl8wNzgN2pv4DAmdoTb03r8DYOaLVm7ufQc=");
+  -webkit-box-shadow: 0px 0px 15px -2px #000000; 
+  box-shadow: 0px 0px 15px -2px #000000;
+  border: 3px solid rgb(100, 5, 5) ;
+
+}
+
+#replay{
+  margin: 0 auto;
+  display: block;
+}
+
+
+i{
+  cursor: pointer;
+  color: rgb(100, 5, 5);
+}
+
+#title{
+  display: block;
+  width: 60vw;
+  margin: auto;
+}
+
+#imgcharacter{
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+p, h3{
+  font-weight: bold;
+  color: rgb(100, 5, 5);
+}
+
+button{
+  padding: 8px 15px;
+  background-color: rgb(100, 5, 5);
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  border-radius: 15px;
+}
+
+span{
+  color:black;
+}
+
+#mycharacter, .enemy, #impact1, #impact2, #impact3, #impact4{
+  position:absolute;
+  bottom:20px;
+  max-height: 30vh;
+}
+
+#special1, #special2, #special3, #special4 {
+  position:absolute;
+  transform: rotate(90deg);
+  height: 300px;
+}
+
+#enemy1{
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.attackeffect{
+ display: none;
+}
+
+#impact1{
+  right: -80px;
+  z-index: 2;
+}
+
+#special1{
+  top:300px;
+  right: -300px;
+  z-index: 2;
+}
+
+
+#enemy2{
+  right: 200px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#impact2{
+  right: 100px;
+  z-index: 4;
+}
+
+#special2{
+  top:300px;
+  right: -100px;
+  z-index: 4;
+}
+
+#enemy3{
+  right: 400px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#impact3{
+  right: 320px;
+  z-index: 6;
+}
+
+#special3{
+  top:300px;
+  right: 120px;
+  z-index: 6;
+}
+
+#enemy4{
+  right: 600px;
+  z-index: 7;
+  cursor: pointer;
+}
+
+#impact4{
+  right: 520px;
+  z-index: 8;
+}
+
+#special4{
+  top:300px;
+  right: 300px;
+  z-index: 8;
+}
