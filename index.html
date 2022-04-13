@@ -2,18 +2,19 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Titre de la page</title>
+    <title>Monoligth Arena</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
   </head>
 
-  <body class="body">
+  <body id="body">
       <img src="https://monolitharena.com/wp-content/uploads/2018/09/logo_ma_poziom.png" id="title">
 
     <div id="board" class="container text-center mt-3 mb-3">
-    <button id="start">Rentrer dans l'arène</button>
+    <a id="start">Rentrer dans l'arène</a>
 
     <div id="chooseboard" style="display: none">
       <h2>Choisis ton champion :</h2>
@@ -22,7 +23,7 @@
                 <i class="fa-solid fa-circle-arrow-left fa-2xl" id="left"></i>
               </div>
               <div class="col-8 align-self-center">
-                <img src = "https://c.tenor.com/jP0qr_Ha7_MAAAAi/darksouls-knight.gif" id="imgcharacter">
+                <img src = "https://images.squarespace-cdn.com/content/v1/5b29c2dec258b4b6c5403167/1613452369548-DPF8PZPYJMHQIZOI7BX4/paladin_animated.gif" id="imgcharacter">
               </div>
               <div class="col-2 align-self-center">
                 <i class="fa-solid fa-circle-arrow-right fa-2xl" id="right"></i>
@@ -36,66 +37,82 @@
             <p style="display: inline-block;">Mana : <span id="mana">40</span></p>
             <p>Attaque spéciale : <br><span id="special">Dark Vision : inflige 5 dégâts. Jusqu'au prochain tour, chaque coup reçu sera réduit de 2. Coût 20 mana</span></p>
             <br>
-            <button id="choosecharacter">Commencer la Partie</button>
+            <a id="choosecharacter">Commencer la Partie</a>
     
       </div>      
 
     </div>
-
+  <div id="stop">
     <div id="event" style="display: none;" class="container">
       <h3 class="mb-4 text-center">Il reste <span id="round"></span> tours de jeu</h3>
       <div class="row container">
         <div class="col-6">
-          <h3>Mon Champion :</h3>
+          <h3>Mon Champion : <span id="mychampion"></span></h3>
           <p>HP : <span id="myhp"></span></p>
           <p>Mana : <span id="mymana"></span></p>
           <p>Dégats : <span id="mydamage"></span></p>
           <p>Attaque spéciale : <span id="myspecial"></span></p>
+          <a id="actionenemy">Voir les actions de la partie</a>
         </div>
 
         <div class="col-6">
-          <h3>Cible :</h3>
+          <h3>Cible : <span id="mytarget"></span></h3>
           <p>HP : <span id="enemyhp"></span></p>
           <p>Mana : <span id="enemymana"></span></p>
           <p>Dégats : <span id="enemydamage"></span></p>
           <p>Attaque spéciale : <span id="enemyspecial"></span></p>
-          <button id="attackem1">attaque simple</button>
-          <button id="attackspecialem1">Attaque spéciale</button>
-          <button id="attackem2">attaque simple</button>
-          <button id="attackspecialem2">Attaque spéciale</button>
-          <button id="attackem3">attaque simple</button>
-          <button id="attackspecialem3">Attaque spéciale</button>
-          <button id="attackem4">attaque simple</button>
-          <button id="attackspecialem4">Attaque spéciale</button>
+          <a id="attackem1">attaque simple</a>
+          <a id="attackspecialem1">Attaque spéciale</a>
+          <a id="attackem2">attaque simple</a>
+          <a id="attackspecialem2">Attaque spéciale</a>
+          <a id="attackem3">attaque simple</a>
+          <a id="attackspecialem3">Attaque spéciale</a>
+          <a id="attackem4">attaque simple</a>
+          <a id="attackspecialem4">Attaque spéciale</a>
         </div>
 
       </div>
     </div>
+  </div>
 
 
     <div id="boardgame" style="display: none;">
       <img src="" id="mycharacter">
+      <img src="https://static.wixstatic.com/media/340f1d_7740c05cadbb4fa0bffb74c27770de1e~mv2.gif" id="upmana" class="attackeffect">
+      <img src="https://media1.giphy.com/media/xUA7aO3740serwGGze/giphy.gif?cid=6c09b952mm7d5b9dyemdqm6y3rtz8t036v6xvt6eyviezl1h&rid=giphy.gif&ct=s" id="uplife" class="attackeffect">
       <br>
       <img src="" id="enemy1" class="enemy">
-      <img src="eruption-sunrise-well-effect-unscreen.gif" id="impact1" class="attackeffect">
+      <img src="image/eruption-sunrise-well-effect-unscreen.gif" id="impact1" class="attackeffect">
       <img src="https://superveggeto187.tripod.com/a-addon36.gif" id="special1" class="attackeffect">
-      
       <img src="" id="enemy2" class="enemy">
-      <img src="eruption-sunrise-well-effect-unscreen.gif" id="impact2" class="attackeffect">
+      <img src="image/eruption-sunrise-well-effect-unscreen.gif" id="impact2" class="attackeffect">
       <img src="https://superveggeto187.tripod.com/a-addon36.gif" id="special2" class="attackeffect">
       <img src="" id="enemy3" class="enemy">
-      <img src="eruption-sunrise-well-effect-unscreen.gif" id="impact3" class="attackeffect">
+      <img src="image/eruption-sunrise-well-effect-unscreen.gif" id="impact3" class="attackeffect">
       <img src="https://superveggeto187.tripod.com/a-addon36.gif" id="special3" class="attackeffect">
       <img src="" id="enemy4" class="enemy">
-      <img src="eruption-sunrise-well-effect-unscreen.gif" id="impact4" class="attackeffect">
+      <img src="image/eruption-sunrise-well-effect-unscreen.gif" id="impact4" class="attackeffect">
       <img src="https://superveggeto187.tripod.com/a-addon36.gif" id="special4" class="attackeffect">
     </div>
 
+    <div id="victoryconfetti" style="display:none;">
+    </div>
 
     <div id="final" style="display: none;" class="container">
       <h3 class="mb-4 text-center" id="winner">Vous avez gagné Champion !</h3>
-      <button id="replay">Rejouer ?</button>
+      <a id="replay">Rejouer ?</a>
     </div>
+
+    <div id="darkscreen" style="display: none;">
+
+    </div>
+
+    <div id="enemyaction" class="container" >
+      <h2>Voici les actions de la partie :</h1>
+      <p id="firstaction">Aucune action pour le moment</p>
+    </div>
+
+    
 
     <!--
 
@@ -117,12 +134,17 @@ fighter : https://c.tenor.com/jP0qr_Ha7_MAAAAi/darksouls-knight.gif
 
     <script src="script.js"></script>
     <script src="game.js"></script>
+    <script src="turn.js"></script>
     <script src="character.js"></script>
     <script src="figther.js"></script>
     <script src="paladin.js"></script>
     <script src="monk.js"></script>
     <script src="berzerker.js"></script>
     <script src="assassin.js"></script>
+    <script src="wizard.js"></script>
+    <script src="grolem.js"></script>
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

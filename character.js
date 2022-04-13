@@ -30,7 +30,6 @@
     }
   
     dealDamage = (victim) => {
-      console.log("ici");
       victim.takeDamage(this, this.dmg);
     }
   
@@ -44,7 +43,9 @@
           victim.takeDamage(this, this.specialDmg);
         }
         if (this.specialHeal > 0){
+
           this.hp += this.specialHeal;
+
         }
         if (this.specialBoost > 0){
           this.dmg += this.specialBoost;

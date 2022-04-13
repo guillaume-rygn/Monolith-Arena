@@ -1,5 +1,6 @@
 let start = document.getElementById("start");
-
+let bodymain = document.getElementById("body")
+let stop = document.getElementById("stop");
 let choose = document.getElementById("choosecharacter");
 let left = document.getElementById("left");
 let right = document.getElementById("right");
@@ -40,25 +41,56 @@ let round = document.getElementById("round");
 let winner = document.getElementById("winner");
 let final = document.getElementById("final");
 let replay= document.getElementById("replay");
+let victoryconfetti = document.getElementById("victoryconfetti");
 
 let impact1 = document.getElementById("impact1");
 let impact2 = document.getElementById("impact2");
 let impact3 = document.getElementById("impact3");
 let impact4 = document.getElementById("impact4");
-let swordaudio = new Audio('mixkit-metal-hit-woosh-1485.wav');
-let mainmusic = new Audio('honor-and-sword-main-11222(1).mp3');
-let choosemusic = new Audio('Super Smash Bros Choose Your Character Sound Effect.mp3');
-let fight = new Audio('3..2..1.. FIGHT! - Sound Effect.mp3');
-let arena = new Audio('🎵 RPG Battle Music Enter The Arena.mp3');
-let crowd = new Audio('Medieval Battle Ambience with Heavy Crowd and Sword Fightin.mp3');
-let victory = new Audio('Gladiator Victory Song.mp3');
+let special1 = document.getElementById("special1");
+let special2 = document.getElementById("special2");
+let special3 = document.getElementById("special3");
+let special4 = document.getElementById("special4");
+let upmana = document.getElementById("upmana");
+let uplife = document.getElementById("uplife");
+let darkscreen = document.getElementById("darkscreen");
+let enemyaction = document.getElementById("enemyaction");
+let actionenemy = document.getElementById("actionenemy");
+let firstaction = document.getElementById("firstaction");
+let mytarget = document.getElementById("mytarget");
+let mychampion = document.getElementById("mychampion");
+let title = document.getElementById("title");
+
+let swordaudio = new Audio('audio/mixkit-metal-hit-woosh-1485.wav');
+let mainmusic = new Audio('audio/honor-and-sword-main-11222(1).mp3');
+let choosemusic = new Audio('audio/Super Smash Bros Choose Your Character Sound Effect.mp3');
+let fight = new Audio('audio/3..2..1.. FIGHT! - Sound Effect.mp3');
+let arena = new Audio('audio/🎵 RPG Battle Music Enter The Arena.mp3');
+let crowd = new Audio('audio/Medieval Battle Ambience with Heavy Crowd and Sword Fightin.mp3');
+let victory = new Audio('audio/Gladiator Victory Song.mp3');
+let defeat = new Audio('audio/epic-sad-music-the-greatest-defeat.mp3');
+let specialsound = new Audio('audio/electric-sound-effect.mp3');
 
 let choice;
 let enemyArray = [];
+let enemyorderArray = [];
 let enemystat1;
 let enemystat2;
 let enemystat3;
 let enemystat4;
+let allPlayer = [];
+let order = [];
+let target1
+let target2;
+let target3;
+let target4;
+let player1;
+let player2;
+let player3;
+let player4;
+
+
+
 
 let i = 0;
 
@@ -77,8 +109,10 @@ start.addEventListener("click", function(){
   const Draven = new Berzerker;
   const Moana = new Monk;
   const Ulder = new Paladin;
+  const Yennefer = new Wizard;
+  const Gorn = new Grolem;
 
-  const arrayPlayer = [Grace, Carl, Draven, Moana, Ulder];
+  const arrayPlayer = [Grace, Carl, Draven, Moana, Ulder, Yennefer, Gorn];
   choice = arrayPlayer[0];
 
   right.addEventListener("click", function(){
@@ -132,21 +166,34 @@ start.addEventListener("click", function(){
       if(player != choice){
         enemyArray.push(player);
       }
-    })
+    });
+    let item = enemyArray[Math.floor(Math.random()*enemyArray.length)];
+    let item2 = enemyArray[Math.floor(Math.random()*enemyArray.length)];
+    let item3 = enemyArray[Math.floor(Math.random()*enemyArray.length)];
+    let item4 = enemyArray[Math.floor(Math.random()*enemyArray.length)];
   
-    for(let a = 0; a < arrayPlayer.length; a++){
-      if(a != i){
-        enemy[p].src = arrayPlayer[a].img;
-        p++;
-      }
-      console.log(a)
+    
+    while (item2 == item){
+      item2 = enemyArray[Math.floor(Math.random()*enemyArray.length)];
+    }
+    while (item3 == item || item3 == item2){
+      item3 = enemyArray[Math.floor(Math.random()*enemyArray.length)];
+    }
+    while (item4 == item || item4 == item2 || item4 == item3){
+      item4 = enemyArray[Math.floor(Math.random()*enemyArray.length)];
     }
 
-    enemystat1 = enemyArray[0];
-    enemystat2 = enemyArray[1];
-    enemystat3 = enemyArray[2];
-    enemystat4 = enemyArray[3];
 
+    enemystat1 = item;
+    enemystat2 = item2;
+    enemystat3 = item3;
+    enemystat4 = item4;
+    enemy[0].src = item.img;
+    enemy[1].src = item2.img;
+    enemy[2].src = item3.img;
+    enemy[3].src = item4.img;
+
+    allPlayer = [choice,enemystat1, enemystat2, enemystat3,enemystat4];
 
     myhp.textContent = choice.hp;
     mymana.textContent = choice.mana;

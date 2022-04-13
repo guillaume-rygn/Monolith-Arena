@@ -4,13 +4,13 @@ class Monk extends Character {
     this.state = "playing";
     this.specialDmg = 0;
     this.specialShield = 0;
-    this.specialHeal = 5;
+    this.specialHeal = 8;
     this.specialBoost = 0;
     this.specialCost = 25;
     this.shield = 0;
     this.specialName = "Heal";
     this.name = "Moana";
-    this.img = "https://media2.giphy.com/media/45dQHUNEdoFFVtWJAE/giphy.gif?cid=6c09b95247c122eba9579ccc11ce5456726405b40cd2cba7&rid=giphy.gif&ct=s";
+    this.img = "https://images.squarespace-cdn.com/content/v1/5b29c2dec258b4b6c5403167/1613452599458-WQC0GPNYUOE1BBMS4JL7/shaman_animated.gif";
   }
 }
 

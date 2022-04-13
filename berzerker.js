@@ -10,7 +10,7 @@ class Berzerker extends Character {
     this.shield = 0;
     this.specialName = "Rage";
     this.name = "Draven";
-    this.img = "http://25.media.tumblr.com/46bb60c670bf8d5b4dac7c2ef5f8807a/tumblr_mk3sxtmUEm1rt6jibo1_250.gif";
+    this.img = "https://images.squarespace-cdn.com/content/v1/5b29c2dec258b4b6c5403167/1613451475221-KBW107DDS4YDS6AGZ2XC/smith_animated.gif";
   }
 }
 
