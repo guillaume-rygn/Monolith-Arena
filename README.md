@@ -10,6 +10,10 @@ MONOLITH ARENA  <br>
 
 ![Monolith Arena](image/Screenshot.png)
 
+## Monolith Arena ⚔️
+
+Reste en vie dans l'arène afin de devenir le nouveau champion de Monolith Arena ! Choisis ton champion parmis 7 classes différentes avec chacune ses caractéristiques propres !
+
 ## WEB version 🌐
 
 Le site est en live ici 👉 [Monolith Arena](https://monolitharena.herokuapp.com/)
